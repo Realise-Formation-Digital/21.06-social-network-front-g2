@@ -31,6 +31,9 @@ export default {
   }
   #container {
     height : 80vh;
+    background-color: #ff7539;
+    padding-left : 2vw;
+    padding-top : 2vh;
   }
   @media screen and (max-width: 420px) {
   .content {
