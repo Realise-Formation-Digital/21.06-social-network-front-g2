@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 //Pages
-import home from "../pages/home.vue";
+import home from "../pages/Home.vue";
 import Post from "../pages/Post.vue";
 import Profile from "../pages/Profile.vue";
 import Search from "../pages/Search.vue";
