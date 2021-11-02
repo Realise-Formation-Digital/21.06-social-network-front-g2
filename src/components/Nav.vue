@@ -44,9 +44,12 @@ div {
 }
 #banner {
   background-color: #ff3d00;
-  padding: 2px;
+  padding: 5px;
 }
 #container {
     height : 15vh;
+}
+.navbar {
+    padding : 0;
 }
 </style>
