@@ -3,10 +3,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 //Pages
-import home from "../pages/home.vue";
-import post from "../pages/post.vue";
-import profile from "../pages/profile.vue";
-import search from "../pages/search.vue";
+import home from "../pages/Home.vue";
+import post from "../pages/Post.vue";
+import profile from "../pages/Profile.vue";
+import search from "../pages/Search.vue";
 
 const routes = [
     { path: '/', component: home },
