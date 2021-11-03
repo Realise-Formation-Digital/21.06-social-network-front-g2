@@ -1,51 +1,64 @@
 <template>
-  <div>
-    <post-card
-      title="Ayyy"
-      likes="12"
-      img="https://pbs.twimg.com/media/EV_nVyLWsAEJZ9t.jpg"
-      date="MAIS YO"
-      content="TAMER GIGEWIN GWEOING EIWNGOWE INIEOGW NEWOING WEOINGOIWENG OIEWNOI EWNGOEWINNIOG ENEWOIG NEWOGN OEWINGOIENW OIGEWNOIEW NOGENWIOGN EWOIGN IOEWNGOEWNG OIEWNGOI NEWOIGN OIWENGOI WENOIGENWIO GNEIOWNG IOEWNGIEOWN GIEOWNGOI EWNEOIWGN EWION GEWONGEOEIWN"
-      author="TONPER"
-    />
-    <post-detail commentaire="Dawit"/>
-    <b-form-input v-model="text" placeholder="commentaire"></b-form-input>
-    <b-button variant="primary">Primary</b-button>
+  <b-container class="dawit">
+    <b-row class="">
+      <b-col></b-col>
 
-  </div>
+      <b-col class="name"
+        ><div class="file">
+          <form enctype="multipart/from-data">
+            <div class="fields">
+              <b-form-input id="name" placeholder="Title"></b-form-input><br />
+              <b-form-textarea
+                id="textarea-rows"
+                placeholder="Contents"
+                rows="8"
+              ></b-form-textarea>
+              <label>Upload image</label>
+              <input type="file" />
+              <button class="button-color">Send</button>
+            </div>
+          </form>
+        </div></b-col
+      >
+      <b-col></b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
-import PostCard from "../components/postCard.vue";
-import PostDetail from "../components/postDetail.vue";
-
-
 export default {
   name: "post",
-  components: {
-    PostCard,
-    PostDetail
+  data() {
+    return {
+      file: "",
+      image: "",
+    };
   },
-  data(){
-    return{
-      commentires: [
-        'a',
-        'b',
-        'v'
-      ]
-    }
-  }
+  methods: {
+    onSelect() {
+      const file = this.$$refs.file.files[0];
+      this.file = file;
+    },
+    async onPost() {
+      const formData = new formData();
+      formData.append("file", this.file);
+      console.log(this.file);
+    },
+  },
 };
 </script>
 
 <style scoped>
-
-.form-input {
-  margin : 30px;
-  padding: 20x;
-  display: block;
+.name {
+  background-color: #c30000;
+  padding-top : 10px;
+  padding-bottom : 10px;
 }
+.button-color {
+  background-color: cornflowerblue;
+}
+.dawit{
+  
 
-
-
+}
 </style>
