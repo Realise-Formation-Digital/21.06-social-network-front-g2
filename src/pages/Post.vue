@@ -1,7 +1,7 @@
 <template>
   <b-container class="dawit">
     <b-row class="">
-      <b-col></b-col>
+      <b-col md="0" lg="3"></b-col>
 
       <b-col class="name"
         ><div class="file">
@@ -12,15 +12,18 @@
                 id="textarea-rows"
                 placeholder="Contents"
                 rows="8"
-              ></b-form-textarea>
+              ></b-form-textarea
+              ><br />
               <label>Upload image</label>
-              <input type="file" />
-              <button class="button-color">Send</button>
+              <input type="file" /><br /><br />
+              <b-col md="12">
+              <b-button class="helloo" pill float-right>Button</b-button>
+              </b-col>
             </div>
           </form>
         </div></b-col
       >
-      <b-col></b-col>
+      <b-col md="0" lg="3"></b-col>
     </b-row>
   </b-container>
 </template>
@@ -51,14 +54,15 @@ export default {
 <style scoped>
 .name {
   background-color: #c30000;
-  padding-top : 10px;
-  padding-bottom : 10px;
+  padding-top: 10px;
+  margin-top: 10vh;
+  padding-bottom: 10px;
 }
 .button-color {
   background-color: cornflowerblue;
 }
-.dawit{
-  
-
+.file {
+  height: 430px;
 }
+
 </style>

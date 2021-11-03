@@ -13,6 +13,9 @@
       <p>{{ content }}</p>
       <p id="righto">{{likes}}</p>
     </div>
+    <div v-if="commentaire !== ''">
+      salut
+    </div>
   </div>
 </template>
 
@@ -50,6 +53,11 @@ export default {
       required: true,
       default: 0,
     },
+    commentaire : {
+      type : String,
+      required : false,
+      default : ""
+    }
   },
 };
 </script>
