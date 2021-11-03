@@ -8,19 +8,44 @@
       content="TAMER GIGEWIN GWEOING EIWNGOWE INIEOGW NEWOING WEOINGOIWENG OIEWNOI EWNGOEWINNIOG ENEWOIG NEWOGN OEWINGOIENW OIGEWNOIEW NOGENWIOGN EWOIGN IOEWNGOEWNG OIEWNGOI NEWOIGN OIWENGOI WENOIGENWIO GNEIOWNG IOEWNGIEOWN GIEOWNGOI EWNEOIWGN EWION GEWONGEOEIWN"
       author="TONPER"
     />
+    <post-detail commentaire="Dawit"/>
+    <b-form-input v-model="text" placeholder="commentaire"></b-form-input>
+    <b-button variant="primary">Primary</b-button>
+
   </div>
 </template>
 
 <script>
-import postCard from "../components/postCard.vue";
+import PostCard from "../components/postCard.vue";
+import PostDetail from "../components/postDetail.vue";
+
 
 export default {
-  name: "Post",
+  name: "post",
   components: {
-    postCard,
+    PostCard,
+    PostDetail
   },
+  data(){
+    return{
+      commentires: [
+        'a',
+        'b',
+        'v'
+      ]
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
+
+.form-input {
+  margin : 30px;
+  padding: 20x;
+  display: block;
+}
+
+
+
 </style>
