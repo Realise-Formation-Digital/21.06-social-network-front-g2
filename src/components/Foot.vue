@@ -1,5 +1,5 @@
 <template>
-  <div id="container"></div>
+  <div id="container">©Copyright Sara-Antoine-Augusto-Dawit-David</div>
 </template>
 
 
@@ -10,6 +10,7 @@
 #container {
   width: 100%;
   height: 5vh;
-  background-color: black;
+  background-color: #c30000;
+  opacity: 0.9;
 }
 </style>
