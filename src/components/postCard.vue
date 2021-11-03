@@ -1,3 +1,4 @@
+  <!-- Components postCard.vue -->
 <template>
   <div>
     <div id="postContainer">
@@ -11,11 +12,12 @@
     </div>
     <div>
       <p>{{ content }}</p>
-      <p id="righto">{{likes}}</p>
+      <p id="righto">{{ likes }}</p>
     </div>
   </div>
 </template>
 
+  <!-- Script -->
 <script>
 export default {
   name: "post",
@@ -54,12 +56,13 @@ export default {
 };
 </script>
 
+  <!-- CSS -->
 <style scoped>
 div {
   margin: 10px;
 }
 #postContainer {
-  display : flex;
+  display: flex;
 }
 .cardImg {
   display: block;

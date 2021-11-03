@@ -1,3 +1,5 @@
+  <!-- postCard -->
+
 <template>
   <div>
     <post-card
@@ -11,6 +13,7 @@
   </div>
 </template>
 
+  <!-- Link components to postcard.vue -->
 <script>
 import postCard from "../components/postCard.vue";
 

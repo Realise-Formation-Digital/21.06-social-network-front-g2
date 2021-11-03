@@ -1,3 +1,4 @@
+  <!-- Footer -->
 <template>
   <div id="container">©Copyright Sara-Antoine-Augusto-Dawit-David</div>
 </template>
@@ -6,6 +7,7 @@
 <script>
 </script>
 
+  <!-- CSS -->
 <style scoped>
 #container {
   width: 100%;

@@ -11,6 +11,7 @@
   </div>
 </template>
 
+  <!-- Link to Nav-Foot -->
 <script>
 import Nav from "./components/Nav";
 import Foot from "./components/Foot";
@@ -24,6 +25,7 @@ export default {
 };
 </script>
 
+  <!-- CSS -->
 <style>
 #maxContainer {
   background-image: url("./assets/backImg.jpeg");

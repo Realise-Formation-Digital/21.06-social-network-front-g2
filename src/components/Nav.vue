@@ -1,3 +1,4 @@
+  <!-- Nav + navbar-->
 <template>
   <div id="navContainer">
     <div id="banner">
@@ -27,10 +28,11 @@
   </div>
 </template>
 
-<!-- Script components. David-->
+
 <script>
 </script>
 
+  <!-- CSS -->
 <style scoped>
 div {
   padding: 0;
@@ -59,15 +61,14 @@ div {
   }
 
   .nav-link {
-    
     font-size: 2rem;
     -webkit-text-stroke: 1px black;
-    border : solid;
+    border: solid;
     border-color: black;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top : 1vh;
-    margin-bottom : 1vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
   }
 
   .nav-link:hover {
@@ -80,9 +81,9 @@ div {
   }
 
   .navbar-toggler {
-    height : 100%;
-    border : none;
-    padding-top : 0;
+    height: 100%;
+    border: none;
+    padding-top: 0;
     padding-bottom: 5vh;
   }
 }

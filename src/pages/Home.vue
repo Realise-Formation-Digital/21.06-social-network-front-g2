@@ -1,3 +1,4 @@
+  <!-- Home page -->
 <template>
   <b-container class="bv-example-row">
     <b-row>
