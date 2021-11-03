@@ -1,8 +1,5 @@
 <template>
-  <div id="container">
-  ©Copyright    Sara-Antoine-Augusto-Dawit-David     
-  </div>
-
+  <div id="container">©Copyright Sara-Antoine-Augusto-Dawit-David</div>
 </template>
 
 
