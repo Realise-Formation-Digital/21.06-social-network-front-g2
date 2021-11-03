@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="container">
+    <div id="postContainer">
       <img class="cardImg" :src="img" />
       <div>
         <h1>{{ title }}</h1>
@@ -58,7 +58,7 @@ export default {
 div {
   margin: 10px;
 }
-#container {
+#postContainer {
   display : flex;
 }
 .cardImg {
