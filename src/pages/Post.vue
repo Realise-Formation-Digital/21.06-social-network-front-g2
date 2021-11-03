@@ -17,7 +17,7 @@
               <label>Upload image</label>
               <input type="file" /><br /><br />
               <b-col md="12">
-              <b-button class="helloo" pill float-right>Button</b-button>
+              <b-button pill float-right>Button</b-button>
               </b-col>
             </div>
           </form>
