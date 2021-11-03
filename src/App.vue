@@ -35,10 +35,14 @@ export default {
     padding-left : 2vw;
     padding-top : 2vh;
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 990px) {
   .content {
     width : 100vw;
     margin-left : 0;
+  }
+  #container {
+    height : 80vh;
+    padding-top : 4vh;
   }
 }
 </style>
