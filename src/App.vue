@@ -30,7 +30,7 @@ export default {
 #maxContainer {
   background-image: url("./assets/backImg.jpeg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size:cover ;
 }
 .content {
   width: 74vw;
@@ -45,7 +45,7 @@ export default {
   padding-top: 2vh;
   overflow: auto;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 990px) {
   .content {
     width: 100vw;
     margin-left: 0;
