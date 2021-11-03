@@ -5,7 +5,10 @@
     </div>
 
     <b-navbar toggleable="lg" type="dark" class="navColor">
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle
+        target="nav-collapse"
+        class="navCollapse"
+      ></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
@@ -13,9 +16,9 @@
           <b-nav-item href="/Profile">Profile</b-nav-item>
           <b-nav-item href="/Post">Post</b-nav-item>
           <b-nav-item href="/Search">Search</b-nav-item>
-            <b-nav-item>Log In</b-nav-item>
-            <b-nav-item>Log Out </b-nav-item>
-            <b-nav-item>Sign In </b-nav-item>
+          <b-nav-item>Log In</b-nav-item>
+          <b-nav-item>Log Out </b-nav-item>
+          <b-nav-item>Sign In </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -35,10 +38,10 @@ div {
 }
 .navColor {
   background-color: #c30000;
+  height: 5vh;
 }
 #logo {
-  width: 120px;
-  height: auto;
+  max-height: 10vh;
 }
 #banner {
   background-color: #ff3d00;
@@ -47,8 +50,40 @@ div {
   height: 15vh;
 }
 .nav-link {
-    padding : 0;
+  padding: 0;
+  color: yellow !important;
 }
+@media screen and (max-width: 990px) {
+  .navColor {
+    height: 7vh;
+  }
 
+  .nav-link {
+    
+    font-size: 2rem;
+    -webkit-text-stroke: 1px black;
+    border : solid;
+    border-color: black;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top : 1vh;
+    margin-bottom : 1vh;
+  }
 
+  .nav-link:hover {
+    background-color: #ff7539 !important;
+  }
+
+  .navbar-collapse {
+    background-color: #c30000;
+    text-align: center;
+  }
+
+  .navbar-toggler {
+    height : 100%;
+    border : none;
+    padding-top : 0;
+    padding-bottom: 5vh;
+  }
+}
 </style>
