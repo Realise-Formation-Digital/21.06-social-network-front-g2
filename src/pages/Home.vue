@@ -1,10 +1,5 @@
 <template>
-  <div>
-    <login/>
-    <signin/>
-    
-  </div>
-  
+  <div>asd</div>
 </template>
 
 <script>
