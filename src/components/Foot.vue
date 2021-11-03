@@ -1,8 +1,8 @@
 <template>
-  <div id="container"></div>
- <b-row>
-    <b-col>1 of 3</b-col>
-  </b-row>
+  <div id="container">
+  ©Copyright    Sara-Antoine-Augusto-Dawit-David     
+  </div>
+
 </template>
 
 
@@ -13,7 +13,7 @@
 #container {
   width: 100%;
   height: 5vh;
-  background-color: #020202;
-  opacity: 0.5;
+  background-color: #c30000;
+  opacity: 0.9;
 }
 </style>
