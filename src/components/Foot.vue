@@ -1,6 +1,6 @@
   <!-- Footer -->
 <template>
-  <div id="container">©Copyright Sara-Antoine-Augusto-Dawit-David</div>
+  <div id="containerFoot">©Copyright Sara-Antoine-Augusto-Dawit-David</div>
 </template>
 
 
@@ -9,7 +9,7 @@
 
   <!-- CSS -->
 <style scoped>
-#container {
+#containerFoot {
   width: 100%;
   height: 5vh;
   background-color: #c30000;

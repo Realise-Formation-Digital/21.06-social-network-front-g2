@@ -1,8 +1,14 @@
   <!-- Components postCard.vue -->
 <template>
-  <div>
+  <div :id="idPost" @click="cardClick">
+
+    <!-- Container of the post card -->
     <div id="postContainer">
+      
+      <!-- image on top left of card -->
       <img class="cardImg" :src="img" />
+      
+      <!-- Title and author next to image -->
       <div>
         <h1>{{ title }}</h1>
         <h6>
@@ -10,12 +16,18 @@
         </h6>
       </div>
     </div>
-    <div>
+
+    <!-- Content under image and author -->
+    <div class="retour">
       <p>{{ content }}</p>
       <p id="righto">{{ likes }}</p>
     </div>
-    <div v-if="commentaire !== ''">
-      salut
+
+    <!-- If comments are set, display them -->
+    <div v-if="comments !== []">
+      <div v-for="(comment, index) in comments" :key="index">
+        {{comment}}
+      </div>
     </div>
   </div>
 </template>
@@ -55,10 +67,22 @@ export default {
       required: true,
       default: 0,
     },
-    commentaire : {
-      type : String,
+    comments : {
+      type : Array,
       required : false,
-      default : ""
+      default: () => []
+    },
+    idPost : {
+      type : Number,
+      required : true,
+      default : -1
+    }
+  },
+  methods : {
+    //Emits this child id to parent for more detailed display
+    cardClick() {
+      this.$emit("clicked", this.idPost);
+      console.log('saldlasdlaslsakgkmdfbpmidbbdifdbebiebiobesniobesnikodbfnio')
     }
   }
 };
@@ -82,5 +106,8 @@ div {
 
 #righto {
   text-align: right;
+}
+.retour {
+  word-break: break-all;
 }
 </style>
