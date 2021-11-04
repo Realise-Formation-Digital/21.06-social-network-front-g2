@@ -10,9 +10,23 @@
         :img=post.img
         :likes=post.likes
         :title=post.title
-        :comments=comments
+        :idPost=post.id
+        @clicked="clickPost"
       />
     </div>
+    
+    <b-modal id="postDetail" hide-footer="true" scrollable>
+      <post-card
+        :author="singlePost && singlePost.author"
+        :content="singlePost && singlePost.content"
+        :date="singlePost && singlePost.date"
+        :img="singlePost && singlePost.img"
+        :likes="singlePost && singlePost.likes"
+        :title="singlePost && singlePost.title"
+        :idPost="singlePost && singlePost.id"
+        :comments="comments"
+      />
+    </b-modal>
   </div>
 </template>
 
@@ -30,7 +44,8 @@ export default {
   data() {
     return {
       posts: [],
-      comments : ["coucou", "salut", "pepo"]
+      comments : ["coucou", "salut", "pepo"],
+      singlePost : null,
     };
   },
   methods: {
@@ -38,6 +53,12 @@ export default {
       const temp = await axios.get("http://localhost:3000/posts");
       this.posts = temp.data;
     },
+    clickPost(val) {
+      this.singlePost = this.posts[val-1];
+      //Show modal
+      this.$bvModal.show("postDetail");
+      
+    }
   },
 };
 </script>
