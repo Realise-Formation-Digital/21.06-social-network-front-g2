@@ -1,3 +1,4 @@
+  <!-- Page Signin with form -->
 ¨<template>
     <div class="vue-tempalte">
         <form id="test">
@@ -44,6 +45,7 @@ name : "signin"
 }
 </script>
 
+  <!-- CSS -->
 <style scoped>
   #test {
     margin : 20px;

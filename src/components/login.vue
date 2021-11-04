@@ -1,3 +1,4 @@
+  <!-- Page login with form -->
 <template>
       <div class="vue-tempalte">
         <form id="test">
@@ -31,6 +32,8 @@
     
   }
 </script>
+
+  <!-- CSS -->
 <style scoped>
   #test {
     margin : 20px;
