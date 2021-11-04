@@ -1,13 +1,11 @@
   <!-- Components postCard.vue -->
 <template>
   <div :id="idPost" @click="cardClick">
-
     <!-- Container of the post card -->
     <div id="postContainer">
-      
       <!-- image on top left of card -->
       <img class="cardImg" :src="img" />
-      
+
       <!-- Title and author next to image -->
       <div>
         <h1>{{ title }}</h1>
@@ -26,7 +24,7 @@
     <!-- If comments are set, display them -->
     <div v-if="comments !== []">
       <div v-for="(comment, index) in comments" :key="index">
-        {{comment}}
+        {{ comment }}
       </div>
     </div>
   </div>
@@ -67,24 +65,24 @@ export default {
       required: true,
       default: 0,
     },
-    comments : {
-      type : Array,
-      required : false,
-      default: () => []
+    comments: {
+      type: Array,
+      required: false,
+      default: () => [],
     },
-    idPost : {
-      type : Number,
-      required : true,
-      default : -1
-    }
+    idPost: {
+      type: Number,
+      required: true,
+      default: -1,
+    },
   },
-  methods : {
+  methods: {
     //Emits this child id to parent for more detailed display
     cardClick() {
       this.$emit("clicked", this.idPost);
-      console.log('saldlasdlaslsakgkmdfbpmidbbdifdbebiebiobesniobesnikodbfnio')
-    }
-  }
+      console.log("saldlasdlaslsakgkmdfbpmidbbdifdbebiebiobesniobesnikodbfnio");
+    },
+  },
 };
 </script>
 

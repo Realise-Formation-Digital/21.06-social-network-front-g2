@@ -30,7 +30,7 @@ export default {
 #maxContainer {
   background-image: url("./assets/backImg.jpeg");
   background-repeat: no-repeat;
-  background-size:cover ;
+  background-size: cover;
 }
 .content {
   width: 74vw;

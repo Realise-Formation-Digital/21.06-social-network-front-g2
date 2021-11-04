@@ -19,7 +19,7 @@
               <label>Upload image</label>
               <input type="file" /><br /><br />
               <b-col md="12">
-              <b-button pill float-right>Button</b-button>
+                <b-button pill float-right>Button</b-button>
               </b-col>
             </div>
           </form>
@@ -67,5 +67,4 @@ export default {
 .file {
   height: 430px;
 }
-
 </style>
