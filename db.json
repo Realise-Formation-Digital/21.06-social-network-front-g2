@@ -18,6 +18,13 @@
         "title" : "Salut la street",
         "date" : "1 septembre"
         }
-    ] 
+    ],
+    "users" : [
+        {
+            "id" : "1",
+            "nickname" : "Tomberry",
+            "avatar" : "https://static.wikia.nocookie.net/finalfantasy2/images/4/44/Tombery_FFIX_Artwork.jpg"
+        }
+    ]
     
 }
