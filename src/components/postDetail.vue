@@ -1,14 +1,11 @@
   <!-- Components postCard.vue -->
 <template>
   <div :id="idPost">
-
     <!-- Container of the post card -->
     <div id="postContainer">
-      
-
       <!-- image on top left of card -->
       <img class="cardImg" :src="img" />
-      
+
       <!-- Title and author next to image -->
       <div>
         <h1>{{ title }}</h1>
@@ -27,36 +24,35 @@
     <!-- If comments are set, display them -->
     <div v-if="comments !== []">
       <div v-for="(comment, index) in comments" :key="index">
-        {{comment}}
+        {{ comment }}
       </div>
     </div>
 
-  <b-container class="">
-    <b-row class="">
-      <b-col md="0" lg="3"></b-col>
+    <!-- Form with button for add comments  -->
+    <b-container class="">
+      <b-row class="">
+        <b-col md="0" lg="3"></b-col>
 
-      <b-col class="name"
-        ><div class="file">
-          <form enctype="multipart/from-data">
-            <div class="fields">
-              <b-form-textarea
-                id="textarea-rows"
-                placeholder="Contents"
-                rows="8"
-              ></b-form-textarea
-              ><br />
-              <b-col md="12">
-              <b-button pill float-right>Button</b-button>
-              </b-col>
-            </div>
-          </form>
-        </div></b-col
-      >
-      <b-col md="0" lg="3"></b-col>
-    </b-row>
-  </b-container>
-
-
+        <b-col class="name"
+          ><div class="file">
+            <form enctype="multipart/from-data">
+              <div class="fields">
+                <b-form-textarea
+                  id="textarea-rows"
+                  placeholder="Contents"
+                  rows="8"
+                ></b-form-textarea
+                ><br />
+                <b-col md="12">
+                  <b-button pill float-right>Button</b-button>
+                </b-col>
+              </div>
+            </form>
+          </div></b-col
+        >
+        <b-col md="0" lg="3"></b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -95,17 +91,17 @@ export default {
       required: true,
       default: 0,
     },
-    comments : {
-      type : Array,
-      required : false,
-      default: () => []
+    comments: {
+      type: Array,
+      required: false,
+      default: () => [],
     },
-    idPost : {
-      type : Number,
-      required : true,
-      default : -1
-    }
-  }
+    idPost: {
+      type: Number,
+      required: true,
+      default: -1,
+    },
+  },
 };
 </script>
 
