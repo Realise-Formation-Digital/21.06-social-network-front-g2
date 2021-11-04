@@ -1,5 +1,7 @@
 <template>
   <div>
+
+    <!-- Display posts -->
     <div v-for="(post, index) in posts" :key="index">
       <post-card
         :author=post.author
@@ -8,6 +10,7 @@
         :img=post.img
         :likes=post.likes
         :title=post.title
+        :comments=comments
       />
     </div>
   </div>
@@ -19,21 +22,21 @@ import postCard from "../components/postCard.vue";
 export default {
   name: "search",
   components: {
-    postCard,
+    postCard,  //Card to display posts
   },
   mounted() {
-    this.getPosts();
+    this.getPosts();  // On mount get posts data
   },
   data() {
     return {
       posts: [],
+      comments : ["coucou", "salut", "pepo"]
     };
   },
   methods: {
     async getPosts() {
       const temp = await axios.get("http://localhost:3000/posts");
       this.posts = temp.data;
-      console.log(this.posts);
     },
   },
 };
