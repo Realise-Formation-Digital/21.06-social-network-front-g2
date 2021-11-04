@@ -15,8 +15,8 @@
       />
     </div>
     
-    <b-modal id="postDetail" hide-footer="true" scrollable>
-      <post-card
+    <b-modal id="onePost" hide-footer="true" scrollable>
+      <post-detail
         :author="singlePost && singlePost.author"
         :content="singlePost && singlePost.content"
         :date="singlePost && singlePost.date"
@@ -33,10 +33,12 @@
 <script>
 const axios = require("axios").default;
 import postCard from "../components/postCard.vue";
+import PostDetail from '../components/postDetail.vue';
 export default {
   name: "search",
   components: {
-    postCard,  //Card to display posts
+    postCard,
+    PostDetail,  //Card to display posts
   },
   mounted() {
     this.getPosts();  // On mount get posts data
@@ -56,7 +58,7 @@ export default {
     clickPost(val) {
       this.singlePost = this.posts[val-1];
       //Show modal
-      this.$bvModal.show("postDetail");
+      this.$bvModal.show("onePost");
       
     }
   },
