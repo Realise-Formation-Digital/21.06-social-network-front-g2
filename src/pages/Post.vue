@@ -47,6 +47,7 @@ export default {
       formData.append("file", this.file);
       console.log(this.file);
     },
+    
   },
 };
 </script>
