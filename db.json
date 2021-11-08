@@ -1,30 +1,374 @@
 {
-    "posts" : [
-        {
-        "id" : "1",
-        "author" : "antoine",
-        "content" : "Wesh la street<br/>YOYOYOYOY<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd<br>jfoajdfpfd",
-        "img" : "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg",
-        "likes" : 1,
-        "title" : "Salut la street",
-        "date" : "1 septembre"
-        },
-        {
-        "id" : "2",
-        "author" : "dawit",
-        "content" : "Wesh la street",
-        "img" : "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg",
-        "likes" : 1,
-        "title" : "Salut la street",
-        "date" : "1 septembre"
-        }
-    ],
-    "users" : [
-        {
-            "id" : "1",
-            "nickname" : "Tomberry",
-            "avatar" : "https://static.wikia.nocookie.net/finalfantasy2/images/4/44/Tombery_FFIX_Artwork.jpg"
-        }
-    ]
-    
+  "posts": [
+    {
+      "id": "1",
+      "author": "antoine",
+      "content": "Wesh la street",
+      "img": "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg",
+      "likes": 1,
+      "title": "Salut la street",
+      "date": "1 septembre"
+    },
+    {
+      "id": "2",
+      "author": "dawit",
+      "content": "Wesh la street",
+      "img": "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg",
+      "likes": 1,
+      "title": "Salut la street",
+      "date": "1 septembre"
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "antoine",
+      "fullname": "dawit",
+      "nickname": "david",
+      "email address": "dawitshopify@yahoo.com",
+      "password": "ho12va12",
+      "comfirmpassword": "ho12va12"
+    },
+    {
+      "id": 1,
+      "name": "antoine",
+      "fullname": "dawit",
+      "nickname": "david",
+      "email address": "dawitshopify@yahoo.com",
+      "password": "ho12va12",
+      "comfirmpassword": "ho12va12"
+    },
+    {
+      "name": "sdfsadf",
+      "fullname": "asdfasdf",
+      "nickname": "asdfasdf",
+      "email": "asdf@sdfsdag.com",
+      "password": "asdfadsf",
+      "confirmpassword": "asdfasdf",
+      "id": 2
+    },
+    {
+      "name": "asd",
+      "fullname": "asd",
+      "nickname": "asd",
+      "email": "asd@asd.com",
+      "password": "asd",
+      "confirmpassword": "asd",
+      "id": 3
+    },
+    {
+      "name": "asd",
+      "fullname": "asd",
+      "nickname": "asd",
+      "email": "asd@asd.com",
+      "password": "asd",
+      "confirmpassword": "asd",
+      "id": 4
+    },
+    {
+      "name": "",
+      "fullname": "",
+      "nickname": "",
+      "email": "",
+      "password": "",
+      "confirmpassword": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "fullname": "",
+      "nickname": "",
+      "email": "",
+      "password": "",
+      "confirmpassword": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "fullname": "",
+      "nickname": "",
+      "email": "",
+      "password": "",
+      "confirmpassword": "",
+      "id": 7
+    }
+  ],
+  "message": [
+    {
+      "id": 1,
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": 2,
+      "email": "",
+      "password": ""
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 3
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 4
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 5
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 6
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 7
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 8
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 9
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 10
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 11
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 12
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 13
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 14
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 15
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 16
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 17
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 18
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 19
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 20
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 21
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 22
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 23
+    },
+    {
+      "email": "zu",
+      "password": "zu",
+      "error": null,
+      "success": false,
+      "id": 24
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 25
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 26
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 27
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 28
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 29
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 30
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 31
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 32
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 33
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 34
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 35
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 36
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 37
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 38
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 39
+    },
+    {
+      "email": "dawitshopify@yahoo.com",
+      "password": "dava1234",
+      "error": null,
+      "success": false,
+      "id": 40
+    }
+  ]
 }

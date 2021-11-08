@@ -76,6 +76,7 @@ export default {
       };
       return reader.result;
     },
+    
   },
 };
 </script>

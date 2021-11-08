@@ -1,5 +1,7 @@
 <template>
   <div id="navContainer">
+          <b-modal id="modal-sign" hide-footer="true"><signin/></b-modal>
+          <b-modal id="modal-login" hide-footer="true"><login/></b-modal>
     <div id="banner">
       <img src="../assets/icon.png" alt="moinoin" id="logo" />
     </div>
@@ -16,9 +18,9 @@
           <b-nav-item href="/Profile">Profile</b-nav-item>
           <b-nav-item href="/Post">Post</b-nav-item>
           <b-nav-item href="/Search">Search</b-nav-item>
-          <b-nav-item>Log In</b-nav-item>
+          <b-nav-item v-b-modal.modal-login>Log In</b-nav-item>
           <b-nav-item>Log Out </b-nav-item>
-          <b-nav-item>Sign In </b-nav-item>
+          <b-nav-item v-b-modal.modal-sign>Sign In</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -29,6 +31,14 @@
 
 <!-- Script components. David-->
 <script>
+import login from "../components/login.vue"
+import signin from "../components/signin.vue"
+export default {
+  name : "nav",
+  components : {
+    login, signin
+  }
+}
 </script>
 
 <style scoped>
