@@ -1,12 +1,28 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from "./plugins/router.js";
+import Vuex from 'vuex';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+Vue.use(Vuex)
+const store = new Vuex.Store({
+  state: {
+    logged: false
+  },
+  mutations: {
+    setLogged (state, arg) {
+      state.logged = arg
+    }
+  },
+  getters: {
+    getLogged: state => {
+      return state.logged
+    }
+  }
+})
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
@@ -18,5 +34,6 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
-  router: router
+  router: router,
+  store: store,
 }).$mount('#app')

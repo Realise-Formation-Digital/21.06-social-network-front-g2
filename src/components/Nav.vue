@@ -1,7 +1,7 @@
 <template>
   <div id="navContainer">
-          <b-modal id="modal-sign" hide-footer="true"><signin/></b-modal>
-          <b-modal id="modal-login" hide-footer="true"><login/></b-modal>
+    <b-modal id="modal-sign" hide-footer="true"><signin /></b-modal>
+    <b-modal id="modal-login" hide-footer="true"><login /></b-modal>
     <div id="banner">
       <img src="../assets/icon.png" alt="moinoin" id="logo" />
     </div>
@@ -15,12 +15,12 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item href="/">Home</b-nav-item>
-            <b-nav-item href="/Profile">Profile</b-nav-item>
-          <b-nav-item href="/Post">Post</b-nav-item>
-          <b-nav-item href="/Search">Search</b-nav-item>
-          <b-nav-item v-b-modal.modal-login>Log In</b-nav-item>
-          <b-nav-item>Log Out </b-nav-item>
-          <b-nav-item v-b-modal.modal-sign>Sign In</b-nav-item>
+          <b-nav-item v-if="isLogged" href="/Profile">Profile</b-nav-item>
+          <b-nav-item v-if="isLogged" href="/Post">Post</b-nav-item>
+          <b-nav-item v-if="isLogged" href="/Search">Search</b-nav-item>
+          <b-nav-item v-if="!isLogged" v-b-modal.modal-login>Log In</b-nav-item>
+          <b-nav-item v-if="isLogged" @click="logOut">Log Out </b-nav-item>
+          <b-nav-item v-if="!isLogged" v-b-modal.modal-sign>Sign In</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -31,14 +31,26 @@
 
 <!-- Script components. David-->
 <script>
-import login from "../components/login.vue"
-import signin from "../components/signin.vue"
+import login from "../components/login.vue";
+import signin from "../components/signin.vue";
 export default {
-  name : "nav",
-  components : {
-    login, signin
-  }
-}
+  name: "nav",
+  components: {
+    login,
+    signin,
+  },
+  computed: {
+    isLogged() {
+      return this.$store.getters.getLogged;
+    },
+  },
+  methods: {
+    logOut() {
+      localStorage.removeItem('token');
+      this.$store.commit('setLogged', false);
+    }
+  },
+};
 </script>
 
 <style scoped>
@@ -69,15 +81,14 @@ div {
   }
 
   .nav-link {
-    
     font-size: 2rem;
     -webkit-text-stroke: 1px black;
-    border : solid;
+    border: solid;
     border-color: black;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top : 1vh;
-    margin-bottom : 1vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
   }
 
   .nav-link:hover {
@@ -90,9 +101,9 @@ div {
   }
 
   .navbar-toggler {
-    height : 100%;
-    border : none;
-    padding-top : 0;
+    height: 100%;
+    border: none;
+    padding-top: 0;
     padding-bottom: 5vh;
   }
 }

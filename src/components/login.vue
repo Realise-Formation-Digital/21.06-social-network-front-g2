@@ -30,35 +30,27 @@ const axios = require("axios").default;
 export default {
   name: "Login",
 
-  data: () => ({
-    form: {
-      email: "",
-      password: "",
-      error: null,
-      success: false,
-    },
-  }),
+  data() {
+    return {
+      form :
+        {
+          "email" : "",
+          "password" : ""
+        }
+    }
+  },
   methods: {
     postMessage() {
-      if (this.form.email === "" || this.form.password === "") {
-        alert("something in worrg!");
-        return;
-      }
-
-      if (this.form.email !== this.form.password) {
-        alert("The passwords don't match!");
-        return;
-      }
-
-      axios.post("http://localhost:3000/message", this.form),
-        (this.success = false),
-        (this.error = null
-          .then((res) => {
-            console.log(res);
-          })
-          .catch((error) => {
-            console.log(error);
-          }));
+      axios.post("http://127.0.0.1:8000/api/signin", this.form)
+        .then(
+            (res)=>{
+              localStorage.setItem('token', res.data.token)
+              this.$store.commit('setLogged', true)
+            },
+            (err)=>{
+              console.log(err);
+            }
+        )
     },
   },
 };
