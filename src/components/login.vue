@@ -1,3 +1,4 @@
+  <!-- Components Login with form -->
 <template>
   <div class="vue-tempalte">
     <h3>Login</h3>
@@ -16,7 +17,7 @@
         v-model="form.password"
         class="form-control form-control-lg"
       />
-
+  <!-- Postmessage-->
       <div v-if="error">{{ error }}</div>
     </div>
     <div v-if="success" id="success">Logged in successfully</div>
@@ -68,5 +69,7 @@ form {
 }
 .form-group > label {
   font-weight: 600;
+  
 }
+
 </style>
