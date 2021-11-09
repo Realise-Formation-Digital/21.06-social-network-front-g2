@@ -31,7 +31,7 @@
     <!-- Form with button for add comments  -->
     <b-container class="">
       <b-row class="">
-        <b-col md="0" lg="3"></b-col>
+
 
         <b-col class="name"
           ><div class="file">
@@ -44,13 +44,12 @@
                 ></b-form-textarea
                 ><br />
                 <b-col md="12">
-                  <b-button pill float-right>Button</b-button>
+                  <b-button pill float-right>Send</b-button>
                 </b-col>
               </div>
             </form>
           </div></b-col
         >
-        <b-col md="0" lg="3"></b-col>
       </b-row>
     </b-container>
   </div>
@@ -108,12 +107,14 @@ export default {
   <!-- CSS -->
 <style scoped>
 div {
-  margin: 10px;
+  margin: 2px;
+  padding-top: 2px;
+  padding-bottom: 0px;
 }
 
 .cardImg {
   display: block;
-  width: 450px;
+  width: 420px;
   height: 250px;
   object-fit: cover;
   padding-right: 10px;
@@ -128,14 +129,14 @@ div {
 
 .name {
   background-color: #c30000;
-  padding-top: 10px;
-  margin-top: 10vh;
+  padding-top: 5px;
+  margin-top: 3vh;
   padding-bottom: 0px;
 }
 .button-color {
   background-color: rgb(#ff7439);
 }
 .file {
-  height: 430px;
+  height: 290px;
 }
 </style>
