@@ -74,5 +74,7 @@ form {
 }
 .form-group > label {
   font-weight: 600;
+  
 }
+
 </style>
