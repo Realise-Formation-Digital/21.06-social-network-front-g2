@@ -1,6 +1,6 @@
   <!-- Components postCard.vue -->
 <template>
-  <div :id="idPost" @click="cardClick">
+  <div :id="idPost">
     <!-- Container of the post card -->
     <div id="postContainer">
       <!-- image on top left of card -->
@@ -27,6 +27,31 @@
         {{ comment }}
       </div>
     </div>
+
+    <!-- Form with button for add comments  -->
+    <b-container class="">
+      <b-row class="">
+
+
+        <b-col class="name"
+          ><div class="file">
+            <form enctype="multipart/from-data">
+              <div class="fields">
+                <b-form-textarea
+                  id="textarea-rows"
+                  placeholder="Contents"
+                  rows="8"
+                ></b-form-textarea
+                ><br />
+                <b-col md="12">
+                  <b-button pill float-right>Send</b-button>
+                </b-col>
+              </div>
+            </form>
+          </div></b-col
+        >
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -76,28 +101,21 @@ export default {
       default: -1,
     },
   },
-  methods: {
-    //Emits this child id to parent for more detailed display
-    cardClick() {
-      this.$emit("clicked", this.idPost);
-      console.log("saldlasdlaslsakgkmdfbpmidbbdifdbebiebiobesniobesnikodbfnio");
-    },
-  },
 };
 </script>
 
   <!-- CSS -->
 <style scoped>
 div {
-  margin: 10px;
+  margin: 2px;
+  padding-top: 2px;
+  padding-bottom: 0px;
 }
-#postContainer {
-  display: flex;
-}
+
 .cardImg {
   display: block;
-  width: 200px;
-  height: 150px;
+  width: 420px;
+  height: 250px;
   object-fit: cover;
   padding-right: 10px;
 }
@@ -107,5 +125,18 @@ div {
 }
 .retour {
   word-break: break-all;
+}
+
+.name {
+  background-color: #c30000;
+  padding-top: 5px;
+  margin-top: 3vh;
+  padding-bottom: 0px;
+}
+.button-color {
+  background-color: rgb(#ff7439);
+}
+.file {
+  height: 290px;
 }
 </style>

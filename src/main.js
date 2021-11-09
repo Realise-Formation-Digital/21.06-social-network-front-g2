@@ -37,3 +37,4 @@ new Vue({
   router: router,
   store: store,
 }).$mount('#app')
+

@@ -1,3 +1,4 @@
+  <!-- Nav + navbar-->
 <template>
   <div id="navContainer">
     <b-modal id="modal-sign" hide-footer="true"><signin /></b-modal>
@@ -29,7 +30,7 @@
   </div>
 </template>
 
-<!-- Script components. David-->
+
 <script>
 import login from "../components/login.vue";
 import signin from "../components/signin.vue";
@@ -53,6 +54,7 @@ export default {
 };
 </script>
 
+  <!-- CSS -->
 <style scoped>
 div {
   padding: 0;
