@@ -38,12 +38,16 @@ export default {
 
   data() {
     return {
-      base64Image : null,
+      base64Image: null,
       title: "",
       content: "",
     };
   },
-
+  computed: {
+    isLogged() {
+      return this.$store.getters.getLogged
+    }
+  },
   methods: {
     async newUser() {
       let json = {
@@ -58,22 +62,21 @@ export default {
       await axios.post("http://localhost:3000/posts", json);
     },
 
-     uploadImage(event) {
+    uploadImage(event) {
       const uploadedImage = event.target.files[0];
       let image = {
-        base64Image: null
-      }
+        base64Image: null,
+      };
       let reader = new FileReader();
       reader.readAsDataURL(uploadedImage);
       reader.onload = function () {
-        image.base64Image = reader.result
+        image.base64Image = reader.result;
       };
       reader.onerror = function (error) {
         console.log("Error: ", error);
       };
-      this.base64Image = image
-    }
-    
+      this.base64Image = image;
+    },
   },
 };
 </script>

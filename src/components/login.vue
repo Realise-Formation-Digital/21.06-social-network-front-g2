@@ -46,9 +46,11 @@ export default {
             (res)=>{
               localStorage.setItem('token', res.data.token)
               this.$store.commit('setLogged', true)
+              alert('Success! Welcome!')
             },
             (err)=>{
               console.log(err);
+              alert(err);
             }
         )
     },

@@ -15,7 +15,7 @@
       />
     </div>
     
-    <b-modal id="postDetail" hide-footer="true" scrollable>
+    <b-modal id="postDetail" :hide-footer=true scrollable>
       <post-card
         :author="singlePost && singlePost.author"
         :content="singlePost && singlePost.content"

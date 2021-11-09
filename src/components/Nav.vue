@@ -1,7 +1,7 @@
 <template>
   <div id="navContainer">
-    <b-modal id="modal-sign" hide-footer="true"><signin /></b-modal>
-    <b-modal id="modal-login" hide-footer="true"><login /></b-modal>
+    <b-modal id="modal-sign" :hide-footer=true><signin /></b-modal>
+    <b-modal id="modal-login" :hide-footer=true><login /></b-modal>
     <div id="banner">
       <img src="../assets/icon.png" alt="moinoin" id="logo" />
     </div>
@@ -14,10 +14,10 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="/">Home</b-nav-item>
-          <b-nav-item v-if="isLogged" href="/Profile">Profile</b-nav-item>
-          <b-nav-item v-if="isLogged" href="/Post">Post</b-nav-item>
-          <b-nav-item v-if="isLogged" href="/Search">Search</b-nav-item>
+          <b-nav-item to="/">Home</b-nav-item>
+          <b-nav-item v-if="isLogged" to="/Profile">Profile</b-nav-item>
+          <b-nav-item v-if="isLogged" to="/Post">Post</b-nav-item>
+          <b-nav-item v-if="isLogged" to="/Search">Search</b-nav-item>
           <b-nav-item v-if="!isLogged" v-b-modal.modal-login>Log In</b-nav-item>
           <b-nav-item v-if="isLogged" @click="logOut">Log Out </b-nav-item>
           <b-nav-item v-if="!isLogged" v-b-modal.modal-sign>Sign In</b-nav-item>
@@ -48,6 +48,7 @@ export default {
     logOut() {
       localStorage.removeItem('token');
       this.$store.commit('setLogged', false);
+      this.$router.push({ name: 'home' })
     }
   },
 };

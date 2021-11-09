@@ -10,7 +10,7 @@ import Profile from "../pages/Profile.vue";
 import Search from "../pages/Search.vue";
 
 const routes = [
-    { path: '/', component: home },
+    { path: '/', component: home, name : "home" },
     { path: '/Post', component: Post },
     { path: '/Profile', component: Profile },
     { path: '/Search', component: Search },
