@@ -13,6 +13,7 @@
         with superhuman skills. Join now, learn to develop your skills buried in
         you and access a world that suits you.
       </b-col>
+      <b-btn @click="startSession()">start session</b-btn>
     </b-row>
   </b-container>
 </template>
@@ -20,6 +21,11 @@
 <script>
 export default {
   name: "Home",
+  methods : {
+    startSession() {
+      sessionStorage.setItem("token", "asdf");
+    }
+  }
 };
 </script>
 

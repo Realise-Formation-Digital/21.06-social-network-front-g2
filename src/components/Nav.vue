@@ -15,7 +15,7 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item href="/">Home</b-nav-item>
-          <b-nav-item href="/Profile">Profile</b-nav-item>
+            <b-nav-item href="/Profile">Profile</b-nav-item>
           <b-nav-item href="/Post">Post</b-nav-item>
           <b-nav-item href="/Search">Search</b-nav-item>
           <b-nav-item v-b-modal.modal-login>Log In</b-nav-item>
