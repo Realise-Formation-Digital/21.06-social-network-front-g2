@@ -1,0 +1,82 @@
+<template>
+  <div>
+    <!-- Display posts -->
+    <div v-for="(post, index) in posts" :key="index">
+      <!------card to display all the post-------->
+      <post-card
+        :author="post.author"
+        :content="post.content"
+        :date="post.date"
+        :img="post.img"
+        :likes="post.likes"
+        :title="post.title"
+        :idPost="post.id"
+        @clicked="clickPost"
+      />
+    </div>
+     <!----------- modal who display one post only --------->
+    <b-modal id="postDetail" :hide-footer=true scrollable>
+      <post-detail
+        :author="singlePost && singlePost.author"
+        :content="singlePost && singlePost.content"
+        :date="singlePost && singlePost.date"
+        :img="singlePost && singlePost.img"
+        :likes="singlePost && singlePost.likes"
+        :title="singlePost && singlePost.title"
+        :idPost="singlePost && singlePost.id"
+        :comments="comments"
+      />
+    </b-modal>
+  </div>
+</template>
+
+<script>
+const axios = require("axios").default;
+import postCard from "../components/postCard.vue";
+import PostDetail from "../components/postDetail.vue";
+export default {
+  name: "search",
+  components: {
+    postCard,
+    PostDetail, //Card to display posts
+  },
+  computed: {
+    isLogged() {
+      return this.$store.getters.getLogged
+    }
+  },
+  mounted() {
+    if (!this.isLogged) {
+      this.$router.push({ name: 'home' })
+    }
+    this.getPosts(); // On mount get posts data
+  },
+  data() {
+    return {
+      posts: [],
+      comments: ["coucou", "salut", "pepo"],
+      singlePost: null,
+    };
+  },
+  methods: {
+    async getPosts() {
+      let config = {
+          headers: {
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        };
+      const temp = await axios.get("http://localhost:8000/api/posts", config);
+      this.posts = temp.data.data;
+      console.log(this.posts)
+    },
+    clickPost(val) {
+      this.singlePost = this.posts[val - 1];
+      //Show modal
+      this.$bvModal.show("onePost");
+    },
+  },
+};
+</script>
+
+<style>
+</style>
