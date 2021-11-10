@@ -39,7 +39,15 @@ export default {
     postCard,
     PostDetail, //Card to display posts
   },
+  computed: {
+    isLogged() {
+      return this.$store.getters.getLogged
+    }
+  },
   mounted() {
+    if (!this.isLogged) {
+      this.$router.push({ name: 'home' })
+    }
     this.getPosts(); // On mount get posts data
   },
   data() {

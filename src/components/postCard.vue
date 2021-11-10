@@ -80,7 +80,6 @@ export default {
     //Emits this child id to parent for more detailed display
     cardClick() {
       this.$emit("clicked", this.idPost);
-      console.log("saldlasdlaslsakgkmdfbpmidbbdifdbebiebiobesniobesnikodbfnio");
     },
   },
 };

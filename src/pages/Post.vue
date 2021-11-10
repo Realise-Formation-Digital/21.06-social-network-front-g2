@@ -23,7 +23,7 @@
               />
             </div>
           </form>
-          <b-button pill @click="newUser">Send</b-button>
+          <b-button pill @click="newPost">Send</b-button>
         </div></b-col
       >
       <b-col md="0" lg="3"></b-col>
@@ -45,21 +45,37 @@ export default {
   },
   computed: {
     isLogged() {
-      return this.$store.getters.getLogged
+      return this.$store.getters.getLogged;
+    },
+  },
+  mounted() {
+    if (!this.isLogged) {
+      this.$router.push({ name: "home" });
     }
   },
   methods: {
-    async newUser() {
-      let json = {
-        title: this.title,
-        content: this.content,
-        img: this.base64Image && this.base64Image.base64Image,
-        author: "placeholder",
-        date: Date.now(),
-        likes: 1,
-      };
-      console.log(json);
-      await axios.post("http://localhost:3000/posts", json);
+    async newPost() {
+      try {
+        let d = new Date();
+        let fullDate = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDay();
+        let json = {
+          title: this.title,
+          content: this.content,
+          img: this.base64Image && this.base64Image.base64Image,
+          author: "placeholder",
+          date: fullDate,
+          likes: 1,
+        };
+        let config = {
+          headers: {
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        };
+        const response = await axios.post("http://localhost:8000/api/posts", json, config);
+        console.log(response);
+      } catch (error) {
+        console.error(error);
+      }
     },
 
     uploadImage(event) {
