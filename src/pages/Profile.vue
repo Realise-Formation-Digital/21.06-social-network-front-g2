@@ -2,6 +2,7 @@
   <div>
     <!-- Display posts -->
     <div v-for="(post, index) in posts" :key="index">
+      <!------card to display all the post-------->
       <post-card
         :author="post.author"
         :content="post.content"
@@ -13,7 +14,7 @@
         @clicked="clickPost"
       />
     </div>
-    
+     <!----------- modal who display one post only --------->
     <b-modal id="postDetail" :hide-footer=true scrollable>
       <post-detail
         :author="singlePost && singlePost.author"
