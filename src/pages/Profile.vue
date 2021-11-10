@@ -71,14 +71,19 @@ export default {
       
       //Request
       const temp = await axios.get("http://localhost:8000/api/posts", config);
-
-      //Put request response into posts array
-      this.posts = temp.data.data;
+      const temp2 = temp.data.data;
+      this.posts = temp2;
+      for (let i=0; i<temp2.length; i++){
+        this.posts[i].id2 = temp2[i].id;
+      }
     },
     clickPost(val) {
-      console.log(val);
-      this.singlePost = this.posts[val];
-      console.log(this.singlePost);
+      for (let i = 0; i < this.posts.length; i++) {
+        if (val === this.posts[i].id2) {
+          this.singlePost = this.posts[i];
+          break;
+        }
+      }
       //Show modal
       this.$bvModal.show("postDetail");
     },
