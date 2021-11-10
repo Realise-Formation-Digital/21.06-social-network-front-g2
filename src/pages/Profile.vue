@@ -59,8 +59,14 @@ export default {
   },
   methods: {
     async getPosts() {
-      const temp = await axios.get("http://localhost:3000/posts");
-      this.posts = temp.data;
+      let config = {
+          headers: {
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        };
+      const temp = await axios.get("http://localhost:8000/api/posts", config);
+      this.posts = temp.data.data;
+      console.log(this.posts)
     },
     clickPost(val) {
       this.singlePost = this.posts[val - 1];
