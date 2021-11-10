@@ -62,6 +62,7 @@
 </template>
 
 <script>
+//
 const axios = require("axios").default;
 export default {
   name: "signin",
@@ -75,7 +76,7 @@ export default {
       confirmpassword: "",
     },
   }),
-
+// method to verify if form empty
   methods: {
     postUser() {
       if (
@@ -86,9 +87,9 @@ export default {
         this.form.password === "" ||
         this.form.confirmpassword === ""
       ) {
-        alert("Please fill all the fields!");
+        alert("Please fill all the fields!"); //if form not completed
         return;
-      }
+      } // if password don't match
       if (this.form.password !== this.form.confirmpassword) {
         alert("The passwords don't match!");
         return;

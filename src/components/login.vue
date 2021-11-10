@@ -26,6 +26,7 @@
     </button>
   </div>
 </template>
+<!-- method to verify if form empty -->
   <script>
 const axios = require("axios").default;
 export default {
@@ -39,7 +40,7 @@ export default {
       },
     };
   },
-
+//retrieve a user's posts by token
   methods: {
     postMessage() {
       axios.post("http://127.0.0.1:8000/api/signin", this.form).then(
