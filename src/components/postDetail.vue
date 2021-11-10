@@ -31,8 +31,6 @@
     <!-- Form with button for add comments  -->
     <b-container class="">
       <b-row class="">
-
-
         <b-col class="name"
           ><div class="file">
             <form enctype="multipart/from-data">

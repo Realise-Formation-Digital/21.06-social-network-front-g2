@@ -1,8 +1,8 @@
   <!-- Nav + navbar-->
 <template>
   <div id="navContainer">
-    <b-modal id="modal-sign" :hide-footer=true><signin /></b-modal>
-    <b-modal id="modal-login" :hide-footer=true><login /></b-modal>
+    <b-modal id="modal-sign" :hide-footer="true"><signin /></b-modal>
+    <b-modal id="modal-login" :hide-footer="true"><login /></b-modal>
     <div id="banner">
       <img src="../assets/icon.png" alt="moinoin" id="logo" />
     </div>
@@ -30,7 +30,7 @@
   </div>
 </template>
 
-
+  <!-- Import pages to components-->
 <script>
 import login from "../components/login.vue";
 import signin from "../components/signin.vue";
@@ -47,10 +47,10 @@ export default {
   },
   methods: {
     logOut() {
-      localStorage.removeItem('token');
-      this.$store.commit('setLogged', false);
-      this.$router.push({ name: 'home' })
-    }
+      localStorage.removeItem("token");
+      this.$store.commit("setLogged", false);
+      this.$router.push({ name: "home" });
+    },
   },
 };
 </script>
