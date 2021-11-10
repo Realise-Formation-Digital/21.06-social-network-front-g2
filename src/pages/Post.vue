@@ -2,12 +2,14 @@
   <b-container>
     <b-row class="">
       <b-col md="0" lg="3"></b-col>
-      <b-col class="name"
-        ><div class="file">
+      <b-col class="name">
+        <div class="file">
           <form enctype="multipart/from-data">
             <div class="fields">
+              <!--------------- input for title on the pape post--->
               <b-form-input v-model="title" placeholder="Title"></b-form-input
               ><br />
+              <!----------content for the post---->
               <b-form-textarea
                 id="textarea-rows"
                 placeholder="Contents"
@@ -15,6 +17,7 @@
                 v-model="content"
               ></b-form-textarea
               ><br />
+              <!------------ uploading image on the page post----->
               <input
                 type="file"
                 accept="image/*"
@@ -23,6 +26,7 @@
               />
             </div>
           </form>
+          <!------------button for sending the post on the page post -------->
           <b-button pill @click="newPost">Send</b-button>
         </div></b-col
       >
