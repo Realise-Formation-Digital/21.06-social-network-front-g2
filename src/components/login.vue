@@ -17,7 +17,7 @@
         v-model="form.password"
         class="form-control form-control-lg"
       />
-  <!-- Postmessage-->
+      <!-- Postmessage-->
       <div v-if="error">{{ error }}</div>
     </div>
     <div v-if="success" id="success">Logged in successfully</div>
@@ -27,33 +27,40 @@
   </div>
 </template>
   <script>
+
+  //Get axios
 const axios = require("axios").default;
 export default {
   name: "Login",
-
   data() {
     return {
-      form :
-        {
-          "email" : "",
-          "password" : ""
-        }
-    }
+      form: {
+        email: "",    //Login with name and password in json array
+        password: "",
+      },
+    };
   },
   methods: {
     postMessage() {
-      axios.post("http://127.0.0.1:8000/api/signin", this.form)
-        .then(
-            (res)=>{
-              localStorage.setItem('token', res.data.token)
-              this.$store.commit('setLogged', true)
-              alert('Success! Welcome!')
-            },
-            (err)=>{
-              console.log(err);
-              alert(err);
-            }
-        )
+
+      //Post credentials
+      axios.post("http://127.0.0.1:8000/api/signin", this.form).then(
+        (res) => {
+
+          //Get token
+          localStorage.setItem("token", res.data.token);
+
+          //Set user as logged in
+          this.$store.commit("setLogged", true);
+
+          //Welcome message
+          alert("Success! Welcome!");
+        },
+        (err) => {
+          console.log(err);
+          alert(err);
+        }
+      );
     },
   },
 };
@@ -69,7 +76,5 @@ form {
 }
 .form-group > label {
   font-weight: 600;
-  
 }
-
 </style>
